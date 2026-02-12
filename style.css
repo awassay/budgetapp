@@ -1,0 +1,182 @@
+.parent{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+
+.d1{
+    border: 3px solid black;
+    align-items: center;
+    width: 200px;
+    height: 180px;
+    border-radius: 8px;
+
+    
+}
+
+.button1{
+    margin: 7px;
+     background-color: #587EF4; 
+     color: aliceblue;
+     border-radius: 4px;
+
+    }
+
+.button2{
+    color: aliceblue;
+    border-radius: 4px;
+    margin: 5px; 
+    background-color: #587EF4;
+}
+
+.d2{
+    border: 3px,solid ,black;
+    width: 210px;
+    border-radius: 8px;
+    height: 180px;
+
+}
+.b2{
+    color: aliceblue;
+    margin-top: 30px;
+    border: solid,3px;
+    border-radius: 8px;
+    background-color: #587EF4;
+    height: 123px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+.c1{
+    
+width: 200px;
+margin-top: 1px;
+  height: 120px;
+  /* background-color: #587EF4; */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  /* outline: none; */
+
+}
+
+.b3{
+
+  /* width: 200px; */
+  height: 150px;
+  margin-top: 12px;
+  overflow-y: auto;
+  border: solid;
+  border-radius: 8px;
+
+}
+
+#list {
+    padding: 0;
+    margin: 0;
+}
+
+
+#list i {
+    cursor: pointer;
+}
+
+.fa-edit {
+    color: green;
+}
+
+.fa-trash {
+    color: red;
+}
+
+
+
+
+
+#list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+#list li span {
+    flex: 1;
+}
+
+#list li span:nth-child(2) {
+    text-align: center;             
+}
+
+#list li span:last-child {
+    text-align: right;             
+}
+
+
+@media (max-width: 900px) {
+    .parent {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .d1,
+    .d2,
+    .c1,
+    .b3 {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .parent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .d1,
+    .d2 {
+        width: 95%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .b2 {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .button1,
+    .button2 {
+        width: 100%;
+    }
+
+    .b3 {
+        width: 95%;
+        height: 200px;
+    }
+
+    #list li {
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    #list li span {
+        width: 100%;
+        text-align: left !important;
+    }
+
+    #list li span:last-child {
+        display: flex;
+        gap: 15px;
+    }
+}
+
