@@ -83,26 +83,24 @@ function checkAmount() {
     if (item_s !== "" && itemAmount !== "") {
 
         if (editIndex !== -1) {
-
-            // purana amount minus karo
+            
             i -= items[editIndex].price;
 
-            // object update karo
+
             items[editIndex].name = item_s;
             items[editIndex].price = itemAmount;
 
-            // edit mode reset
             editIndex = -1;
 
         } else {
-            // Normal add
+        
             items.push({
                 name: item_s,
                 price: itemAmount
             });
         }
 
-        // new amount add karo
+
         i += itemAmount;
         document.getElementById("res").innerHTML = i;
 
@@ -175,6 +173,7 @@ function displayList() {
         list.appendChild(li);
     }
 }
+
 
 
 
