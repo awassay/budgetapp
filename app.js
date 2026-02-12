@@ -82,7 +82,6 @@ function checkAmount() {
 
     if (item_s !== "" && itemAmount !== "") {
 
-        // 🔥 Agar edit mode me hain
         if (editIndex !== -1) {
 
             // purana amount minus karo
@@ -134,39 +133,35 @@ function displayList() {
 
         var iconSpan = document.createElement("span");
 
-        // EDIT ICON
+        // Edit icon
         var editIcon = document.createElement("i");
         editIcon.className = "fa fa-edit";
         editIcon.style.marginRight = "10px";
         editIcon.onclick = function () {
 
-    // inputs me values bhejo
+
     document.getElementById("iName").value = items[x].name;
     document.getElementById("itemAmount").value = items[x].price;
 
-    // kaunsa item edit ho raha hai store karo
     editIndex = x;
 };
 
 
-        // DELETE ICON
         var delIcon = document.createElement("i");
         delIcon.className = "fa fa-trash";
         delIcon.onclick = function () {
 
-            // 1️⃣ total se paisay minus karo
             i -= items[x].price;
             document.getElementById("res").innerHTML = i;
 
-            // 2️⃣ balance dobara calculate karo
+        
             var total = +document.getElementById("totalInput").value;
             var balance = total - i;
             document.getElementById("bal").innerHTML = balance;
 
-            // 3️⃣ array se remove karo
+        
             items.splice(x, 1);
 
-            // 4️⃣ list dobara show karo
             displayList();
         };
 
@@ -180,6 +175,7 @@ function displayList() {
         list.appendChild(li);
     }
 }
+
 
 
 
